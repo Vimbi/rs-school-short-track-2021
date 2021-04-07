@@ -20,5 +20,10 @@ module.exports = {
     'no-plusplus': 'off',
     'func-names': 'off',
     'space-before-function-paren': 'off',
+    'no-console': 'off',
+    'no-param-reassign': 'off',
+    'no-func-assign': 'off',
+    'no-restricted-syntax': 'off',
+    'no-prototype-builtins': 'off',
   },
 };

@@ -13,6 +13,29 @@
  */
 function findIndex(/* array, value */) {
   throw new Error('Not implemented');
+  // for (let i = 0; i < array.length; i++) {
+  //   if (array[i] === value) {
+  //     return i;
+  //   }
+  // }
+  // return false;
 }
+
+// function cachingDecorator(func) {
+//   const cache = new Map();
+
+//   return function(x, y) {
+//     if (cache.has(x, y)) {
+//       return cache.get(x, y);
+//     }
+
+//     const result = func(x, y);
+
+//     cache.set(x, y, result);
+//     return result;
+//   };
+// }
+
+// findIndex = cachingDecorator(findIndex);
 
 module.exports = findIndex;

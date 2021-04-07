@@ -11,13 +11,14 @@
  */
 function sortByHeight(arr) {
   const newArr = arr.filter((x) => x !== -1);
-  newArr.sort();
+  newArr.sort((a, b) => a - b);
   return arr.map((x) => {
+    let y = -1;
     if (x !== -1) {
-      [x] = newArr;
+      [y] = newArr;
       newArr.splice(0, 1);
     }
-    return x;
+    return y;
   });
 }
 
