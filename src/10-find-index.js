@@ -11,31 +11,21 @@
  * For ([1, 2, 3], 2) should return 1
  *
  */
-function findIndex(/* array, value */) {
-  throw new Error('Not implemented');
-  // for (let i = 0; i < array.length; i++) {
-  //   if (array[i] === value) {
-  //     return i;
-  //   }
-  // }
-  // return false;
+function findIndex(array, value) {
+  let low = 0;
+  let high = array.length - 1;
+  while (low <= high) {
+    const middle = Math.floor((high + low) / 2);
+    const middleValue = array[middle];
+
+    if (middleValue === value) return middle;
+    if (middleValue > value) {
+      high = middle - 1;
+    } else {
+      low = middle + 1;
+    }
+  }
+  return null;
 }
-
-// function cachingDecorator(func) {
-//   const cache = new Map();
-
-//   return function(x, y) {
-//     if (cache.has(x, y)) {
-//       return cache.get(x, y);
-//     }
-
-//     const result = func(x, y);
-
-//     cache.set(x, y, result);
-//     return result;
-//   };
-// }
-
-// findIndex = cachingDecorator(findIndex);
 
 module.exports = findIndex;

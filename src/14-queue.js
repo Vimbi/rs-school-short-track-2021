@@ -12,20 +12,23 @@
  */
 
 class Queue {
-  constructor() {
-    this.items = ListNode;
-  }
+  // constructor() {
+  //   this.items = ListNode;
+  // }
 
   get size() {
+    throw new Error('Not implemented');
     // return this.items.length;
   }
 
   enqueue(/* element */) {
+    throw new Error('Not implemented');
     // this.items.push(element);
   }
 
   dequeue() {
-    // if (this.items.lenght === 0) return undefined;
+    throw new Error('Not implemented');
+    // if (this.items.length === 0) return undefined;
     // return this.items.shift();
   }
 }
